@@ -1,0 +1,49 @@
+
+human@LAPTOP-2F54FIBG MINGW64 ~/Desktop/New folder (master)
+$ git log
+commit 4e94b7c956b4d0ada7f0bf66b66628d69683f826 (HEAD -> master, origin/master)
+Author: sakethranga <human.us@yandex.com>
+Date:   Mon Jan 27 11:22:24 2020 +0530
+
+    first commit
+
+commit 59c084b96c137aac2ac2b2d272b0e1e3bcbd172b
+Author: sakethranga <human.us@yandex.com>
+Date:   Mon Jan 27 11:16:09 2020 +0530
+
+    first commit
+
+human@LAPTOP-2F54FIBG MINGW64 ~/Desktop/New folder (master)
+$ git log --oneline
+4e94b7c (HEAD -> master, origin/master) first commit
+59c084b first commit
+
+human@LAPTOP-2F54FIBG MINGW64 ~/Desktop/New folder (master)
+$ git revert 4e94b7c
+Removing git.txt
+[master ef32ead] Revert "first commit"
+ 1 file changed, 50 deletions(-)
+ delete mode 100644 git.txt
+
+human@LAPTOP-2F54FIBG MINGW64 ~/Desktop/New folder (master)
+$ git log
+commit ef32ead92495d71300e94ce5d790b73c0cf991cb (HEAD -> master)
+Author: sakethranga <human.us@yandex.com>
+Date:   Mon Jan 27 11:50:33 2020 +0530
+
+    Revert "first commit"
+
+    This reverts commit 4e94b7c956b4d0ada7f0bf66b66628d69683f826.
+
+commit 4e94b7c956b4d0ada7f0bf66b66628d69683f826 (origin/master)
+Author: sakethranga <human.us@yandex.com>
+Date:   Mon Jan 27 11:22:24 2020 +0530
+
+    first commit
+
+commit 59c084b96c137aac2ac2b2d272b0e1e3bcbd172b
+Author: sakethranga <human.us@yandex.com>
+Date:   Mon Jan 27 11:16:09 2020 +0530
+
+    first commit
+
